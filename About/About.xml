@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>ReclaimFabric</name>
+	<author>Skullywag</author>
+	<targetVersion>Alpha 13</targetVersion>
+  <description>Allows tailors to reclaim fabric from clothing.</description>
+</ModMetaData>

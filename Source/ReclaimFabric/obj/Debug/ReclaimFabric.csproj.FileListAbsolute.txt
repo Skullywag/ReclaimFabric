@@ -1,0 +1,6 @@
+C:\Users\mjsku\Desktop\RimWorldAlpha13Win\RimWorld1135Win\Mods\ReclaimFabric\Source\ReclaimFabric\bin\Debug\ReclaimFabric.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha13Win\RimWorld1135Win\Mods\ReclaimFabric\Source\ReclaimFabric\bin\Debug\ReclaimFabric.pdb
+C:\Users\mjsku\Desktop\RimWorldAlpha13Win\RimWorld1135Win\Mods\ReclaimFabric\Source\ReclaimFabric\bin\Debug\Community Core Library.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha13Win\RimWorld1135Win\Mods\ReclaimFabric\Source\ReclaimFabric\obj\Debug\ReclaimFabric.csprojResolveAssemblyReference.cache
+C:\Users\mjsku\Desktop\RimWorldAlpha13Win\RimWorld1135Win\Mods\ReclaimFabric\Source\ReclaimFabric\obj\Debug\ReclaimFabric.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha13Win\RimWorld1135Win\Mods\ReclaimFabric\Source\ReclaimFabric\obj\Debug\ReclaimFabric.pdb
