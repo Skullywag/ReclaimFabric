@@ -17,7 +17,6 @@ namespace ReclaimFabric
         {
             MethodInfo method1 = typeof(Thing).GetMethod("SmeltProducts", BindingFlags.Instance | BindingFlags.Public);
             MethodInfo method2 = typeof(_Thing).GetMethod("_SmeltProducts", BindingFlags.Static | BindingFlags.NonPublic);
-            Detours.TryDetourFromTo(method1, method2);
             if (!Detours.TryDetourFromTo(method1, method2))
             {
                 return false;
