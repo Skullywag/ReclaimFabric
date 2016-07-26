@@ -34,14 +34,10 @@
       </categories>
 		  <exceptedThingDefs>
 			  <li>Apparel_PowerArmor</li>
-        <li>Apparel_PowerArmorMKII</li>
 			  <li>Apparel_PersonalShield</li>
 			  <li>Apparel_PsychicFoilHelmet</li>
 			  <li>Apparel_KevlarHelmet</li>
 			  <li>Apparel_PowerArmorHelmet</li>
-        <li>Apparel_PowerArmorHelmetMKII</li>
-			  <li>Apparel_PersonalShield</li>
-        <li>PersonalShieldMKII</li>
 			  <li>Apparel_VestPlate</li>
 		  </exceptedThingDefs>
     </fixedIngredientFilter>

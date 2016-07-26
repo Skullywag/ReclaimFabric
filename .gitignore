@@ -1,2 +1,3 @@
 /Source/*/Source-DLLs/*
-Thumbs.db
+*Thumbs.db
+/source/*/Bin/*
