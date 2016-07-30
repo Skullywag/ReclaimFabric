@@ -12,7 +12,7 @@ namespace ReclaimFabric
 {
     public static class _Thing
     {
-        internal static IEnumerable<Thing> _SmeltProducts(this Thing _this, Pawn crafter, float efficiency)
+        internal static IEnumerable<Thing> _SmeltProducts(this Thing _this, float efficiency)
         {
             if (_this.def.smeltProducts != null)
             {
@@ -29,6 +29,7 @@ namespace ReclaimFabric
             }
             if (_this.def.costStuffCount >= 0)
             {
+                Pawn crafter = _this.Position.GetEdifice().InteractionCell.GetFirstPawn();
                 float skillPerc = ((float)crafter.skills.GetSkill(SkillDefOf.Crafting).level / 20);
                 float num = Mathf.Lerp(0.5f, 1.5f, skillPerc);
                 float healthPerc = ((float)_this.HitPoints / (float)_this.MaxHitPoints);
