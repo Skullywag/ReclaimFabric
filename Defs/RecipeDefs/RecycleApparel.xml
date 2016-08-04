@@ -32,16 +32,9 @@
       <categories>
         <li>Apparel</li>
       </categories>
-		  <exceptedThingDefs>
-			  <li>Apparel_PowerArmor</li>
-			  <li>Apparel_PersonalShield</li>
-			  <li>Apparel_PsychicFoilHelmet</li>
-			  <li>Apparel_KevlarHelmet</li>
-			  <li>Apparel_PowerArmorHelmet</li>
-			  <li>Apparel_VestPlate</li>
-		  </exceptedThingDefs>
     </fixedIngredientFilter>
-	<workSkill>Crafting</workSkill>
+	  <workSkill>Crafting</workSkill>
+    <efficiencyStat>TailoringSpeed</efficiencyStat>
   </RecipeDef>
 
 
