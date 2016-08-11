@@ -55,6 +55,7 @@
     <Compile Include="SpecialThingFilterWorker_ReclaimAdvancedArmor.cs" />
     <Compile Include="SpecialThingFilterWorker_ReclaimArmor.cs" />
     <Compile Include="SpecialThingFilterWorker_ReclaimEnergyShields.cs" />
+    <Compile Include="SpecialThingFilterWorker_NoIngredients.cs" />
     <Compile Include="_Thing.cs" />
   </ItemGroup>
   <ItemGroup />

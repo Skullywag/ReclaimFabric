@@ -32,6 +32,9 @@
       <categories>
         <li>Apparel</li>
       </categories>
+      <disallowedSpecialFilters>
+        <li>AllowNoIngredients</li>
+      </disallowedSpecialFilters>
     </fixedIngredientFilter>
 	  <workSkill>Crafting</workSkill>
     <efficiencyStat>TailoringSpeed</efficiencyStat>
