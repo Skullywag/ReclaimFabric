@@ -10,15 +10,15 @@ using Verse;
 
 namespace ReclaimFabric
 {
-    public static class _Thing
+    public static class _Thing_ReclaimFabric
     {
         internal static IEnumerable<Thing> _SmeltProducts(this Thing _this, float efficiency)
         {
             var costListAdj = _this.CostListAdjusted();
             if (_this.def.IsClothes() || _this.def.IsAdvancedArmor() || _this.def.IsArmor())
             {
-                Pawn crafter = _this.Position.GetEdifice().InteractionCell.GetFirstPawn();
-                float skillPerc = ((float)crafter.skills.GetSkill(SkillDefOf.Crafting).level / 20);
+                Pawn crafter = _this.Position.GetEdifice(_this.Map).InteractionCell.GetFirstPawn(_this.Map);
+                float skillPerc = ((float)crafter.skills.GetSkill(SkillDefOf.Crafting).Level / 20);
                 float num = Mathf.Lerp(0.5f, 1.5f, skillPerc);
                 float healthPerc = ((float)_this.HitPoints / (float)_this.MaxHitPoints);
                 float num1 = Mathf.Lerp(0f, 0.4f, healthPerc);

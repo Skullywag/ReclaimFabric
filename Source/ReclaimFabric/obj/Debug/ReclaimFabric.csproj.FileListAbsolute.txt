@@ -33,3 +33,25 @@ C:\Users\mjsku\Desktop\RimWorldAlpha14eWin\RimWorld1249Win\Mods\ReclaimFabric\So
 C:\Users\mjsku\Desktop\RimWorldAlpha14eWin\RimWorld1249Win\Mods\ReclaimFabric\Source\ReclaimFabric\obj\Debug\ReclaimFabric.csprojResolveAssemblyReference.cache
 C:\Users\mjsku\Desktop\RimWorldAlpha14eWin\RimWorld1249Win\Mods\ReclaimFabric\Source\ReclaimFabric\obj\Debug\ReclaimFabric.dll
 C:\Users\mjsku\Desktop\RimWorldAlpha14eWin\RimWorld1249Win\Mods\ReclaimFabric\Source\ReclaimFabric\obj\Debug\ReclaimFabric.pdb
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\ReclaimFabric\Source\ReclaimFabric\obj\Debug\ReclaimFabric.csprojResolveAssemblyReference.cache
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\ReclaimFabric\Source\ReclaimFabric\obj\Debug\ReclaimFabric.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\ReclaimFabric\Source\ReclaimFabric\obj\Debug\ReclaimFabric.pdb
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\ReclaimFabric\Source\ReclaimFabric\bin\Debug\ReclaimFabric.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\ReclaimFabric\Source\ReclaimFabric\bin\Debug\ReclaimFabric.pdb
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\ReclaimFabric\Source\ReclaimFabric\bin\Debug\Assembly-CSharp.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\ReclaimFabric\Source\ReclaimFabric\bin\Debug\Community Core Library.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\ReclaimFabric\Source\ReclaimFabric\bin\Debug\UnityEngine.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\ReclaimFabric\Source\ReclaimFabric\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\ReclaimFabric\Source\ReclaimFabric\bin\Debug\NAudio.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\ReclaimFabric\Source\ReclaimFabric\bin\Debug\NVorbis.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\ReclaimFabric - A16\Source\ReclaimFabric\obj\Debug\ReclaimFabric.csprojResolveAssemblyReference.cache
+C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\ReclaimFabric - A16\Source\ReclaimFabric\obj\Debug\ReclaimFabric.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\ReclaimFabric - A16\Source\ReclaimFabric\obj\Debug\ReclaimFabric.pdb
+C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\ReclaimFabric - A16\Source\ReclaimFabric\bin\Debug\ReclaimFabric.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\ReclaimFabric - A16\Source\ReclaimFabric\bin\Debug\ReclaimFabric.pdb
+C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\ReclaimFabric - A16\Source\ReclaimFabric\bin\Debug\Assembly-CSharp.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\ReclaimFabric - A16\Source\ReclaimFabric\bin\Debug\UnityEngine.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\ReclaimFabric - A16\Source\ReclaimFabric\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\ReclaimFabric - A16\Source\ReclaimFabric\bin\Debug\NAudio.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\ReclaimFabric - A16\Source\ReclaimFabric\bin\Debug\NVorbis.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\ReclaimFabric - A16\Source\ReclaimFabric\bin\Debug\UnityEngine.xml
