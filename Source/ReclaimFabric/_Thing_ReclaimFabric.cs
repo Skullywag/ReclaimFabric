@@ -7,60 +7,65 @@ using System.Text.RegularExpressions;
 using UnityEngine;
 using Verse.AI;
 using Verse;
+using Harmony;
+using System.Reflection.Emit;
 
 namespace ReclaimFabric
 {
-    public static class _Thing_ReclaimFabric
+    class Patches
     {
-        internal static IEnumerable<Thing> _SmeltProducts(this Thing _this, float efficiency)
+        public static class _Thing_ReclaimFabric
         {
-            var costListAdj = _this.CostListAdjusted();
-            if (_this.def.IsClothes() || _this.def.IsAdvancedArmor() || _this.def.IsArmor())
+            internal static IEnumerable<Thing> _SmeltProducts(this Thing _this, float efficiency)
             {
-                Pawn crafter = _this.Position.GetEdifice(_this.Map).InteractionCell.GetFirstPawn(_this.Map);
-                float skillPerc = ((float)crafter.skills.GetSkill(SkillDefOf.Crafting).Level / 20);
-                float num = Mathf.Lerp(0.5f, 1.5f, skillPerc);
-                float healthPerc = ((float)_this.HitPoints / (float)_this.MaxHitPoints);
-                float num1 = Mathf.Lerp(0f, 0.4f, healthPerc);
-                foreach (var thingCost in costListAdj)
+                var costListAdj = _this.CostListAdjusted();
+                if (_this.def.IsClothes() || _this.def.IsAdvancedArmor() || _this.def.IsArmor())
                 {
-                    if (!thingCost.thingDef.intricate)
+                    Pawn crafter = _this.Position.GetEdifice(_this.Map).InteractionCell.GetFirstPawn(_this.Map);
+                    float skillPerc = ((float)crafter.skills.GetSkill(SkillDefOf.Crafting).Level / 20);
+                    float num = Mathf.Lerp(0.5f, 1.5f, skillPerc);
+                    float healthPerc = ((float)_this.HitPoints / (float)_this.MaxHitPoints);
+                    float num1 = Mathf.Lerp(0f, 0.4f, healthPerc);
+                    foreach (var thingCost in costListAdj)
                     {
-                        var PercentMaxLimit = (float)thingCost.count * num1;
-                        var mainSmeltProductCount = (PercentMaxLimit * num);
-                        if (mainSmeltProductCount > 0)
+                        if (!thingCost.thingDef.intricate)
                         {
-                            var resultantSmeltedThing = ThingMaker.MakeThing(thingCost.thingDef, null);
-                            resultantSmeltedThing.stackCount = (int)mainSmeltProductCount;
-                            yield return resultantSmeltedThing;
+                            var PercentMaxLimit = (float)thingCost.count * num1;
+                            var mainSmeltProductCount = (PercentMaxLimit * num);
+                            if (mainSmeltProductCount > 0)
+                            {
+                                var resultantSmeltedThing = ThingMaker.MakeThing(thingCost.thingDef, null);
+                                resultantSmeltedThing.stackCount = (int)mainSmeltProductCount;
+                                yield return resultantSmeltedThing;
+                            }
                         }
                     }
                 }
-            }
-            else if (!costListAdj.NullOrEmpty())
-            {
-                foreach (var thingCost in costListAdj)
+                else if (!costListAdj.NullOrEmpty())
                 {
-                    if (!thingCost.thingDef.intricate)
+                    foreach (var thingCost in costListAdj)
                     {
-                        var twentyFivePercentLimit = (float)thingCost.count * 0.25f;
-                        var randomUpToTwentyFivePercent = GenMath.RoundRandom(twentyFivePercentLimit);
-                        if (randomUpToTwentyFivePercent > 0)
+                        if (!thingCost.thingDef.intricate)
                         {
-                            var resultantSmeltedThing = ThingMaker.MakeThing(thingCost.thingDef, null);
-                            resultantSmeltedThing.stackCount = randomUpToTwentyFivePercent;
-                            yield return resultantSmeltedThing;
+                            var twentyFivePercentLimit = (float)thingCost.count * 0.25f;
+                            var randomUpToTwentyFivePercent = GenMath.RoundRandom(twentyFivePercentLimit);
+                            if (randomUpToTwentyFivePercent > 0)
+                            {
+                                var resultantSmeltedThing = ThingMaker.MakeThing(thingCost.thingDef, null);
+                                resultantSmeltedThing.stackCount = randomUpToTwentyFivePercent;
+                                yield return resultantSmeltedThing;
+                            }
                         }
                     }
                 }
-            }
-            else if (!_this.def.smeltProducts.NullOrEmpty())
-            {
-                foreach (var smeltProduct in _this.def.smeltProducts)
+                else if (!_this.def.smeltProducts.NullOrEmpty())
                 {
-                    var resultantSmeltedThing = ThingMaker.MakeThing(smeltProduct.thingDef, null);
-                    resultantSmeltedThing.stackCount = smeltProduct.count;
-                    yield return resultantSmeltedThing;
+                    foreach (var smeltProduct in _this.def.smeltProducts)
+                    {
+                        var resultantSmeltedThing = ThingMaker.MakeThing(smeltProduct.thingDef, null);
+                        resultantSmeltedThing.stackCount = smeltProduct.count;
+                        yield return resultantSmeltedThing;
+                    }
                 }
             }
         }

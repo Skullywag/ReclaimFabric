@@ -55,3 +55,6 @@ C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\ReclaimFabric - A
 C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\ReclaimFabric - A16\Source\ReclaimFabric\bin\Debug\NAudio.dll
 C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\ReclaimFabric - A16\Source\ReclaimFabric\bin\Debug\NVorbis.dll
 C:\Users\mjsku\Desktop\RimWorldAlpha16Win\RimWorld1393Win\Mods\ReclaimFabric - A16\Source\ReclaimFabric\bin\Debug\UnityEngine.xml
+C:\Users\mjsku\Desktop\RimWorldAlpha17bWin\RimWorld1557Win\Mods\ReclaimFabric\Source\ReclaimFabric\obj\Debug\ReclaimFabric.csprojResolveAssemblyReference.cache
+C:\Users\mjsku\Desktop\RimWorldAlpha17bWin\RimWorld1557Win\Mods\ReclaimFabric\Source\ReclaimFabric\obj\Debug\ReclaimFabric.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha17bWin\RimWorld1557Win\Mods\ReclaimFabric\Source\ReclaimFabric\obj\Debug\ReclaimFabric.pdb

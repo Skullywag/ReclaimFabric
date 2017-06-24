@@ -4,6 +4,7 @@
 
   <RecipeDef>
     <defName>ReclaimFabric</defName>
+    <recipeWorker>ReclaimFabric.RecipeWorker_ReclaimClothing</recipeWorker>
     <label>Reclaim Fabric</label>
     <description>Reclaims fabrics and leathers from clothing, the amount returned is based on the items condition and tailor skill.</description>
     <jobString>Reclaiming fabrics.</jobString>
@@ -25,15 +26,14 @@
         <count>1</count>
       </li>
     </ingredients>
-    <specialProducts>
-      <li>Smelted</li>
-    </specialProducts>
     <fixedIngredientFilter>
       <categories>
         <li>Apparel</li>
       </categories>
       <disallowedSpecialFilters>
-        <li>AllowNoIngredients</li>
+        <li>SpecialThingFilterWorker_ReclaimAdvancedArmor</li>
+        <li>SpecialThingFilterWorker_ReclaimArmor</li>
+        <li>SpecialThingFilterWorker_ReclaimEnergyShields</li>
       </disallowedSpecialFilters>
     </fixedIngredientFilter>
 	  <workSkill>Crafting</workSkill>
