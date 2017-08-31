@@ -11,9 +11,7 @@ using Harmony;
 
 namespace ReclaimFabric
 {
-    [HarmonyPatch(typeof(Thing))]
-    [HarmonyPatch("SmeltProducts")]
-    [HarmonyPatch(new Type[] { typeof(Thing), typeof(float) })]
+    [HarmonyPatch(typeof(Thing), "SmeltProducts", new Type[] { typeof(Thing), typeof(float) })]
     public static class _Thing_ReclaimFabric
     {
         static bool Prefix(Thing _instance, IEnumerable<Thing> _result, ref float efficiency)
