@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>ReclaimFabricDetour</name>
+	<name>ReclaimFabric</name>
 	<author>Skullywag</author>
 	<targetVersion>0.17.1546</targetVersion>
   <description>Allows tailors to reclaim fabric from clothing.</description>
