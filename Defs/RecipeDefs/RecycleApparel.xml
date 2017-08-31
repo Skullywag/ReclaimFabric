@@ -4,7 +4,7 @@
 
   <RecipeDef>
     <defName>ReclaimFabric</defName>
-    <label>Reclaim Fabric</label>
+    <label>Reclaim fabric</label>
     <description>Reclaims fabrics and leathers from clothing, the amount returned is based on the items condition and tailor skill.</description>
     <jobString>Reclaiming fabrics.</jobString>
     <workAmount>1200</workAmount>
