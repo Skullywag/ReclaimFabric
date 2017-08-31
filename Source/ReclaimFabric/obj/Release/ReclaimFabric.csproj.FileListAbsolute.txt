@@ -1,6 +1,0 @@
-D:\Source\GitHub\ReclaimFabric\Source\ReclaimFabric\obj\Release\ReclaimFabric.csprojResolveAssemblyReference.cache
-D:\Source\GitHub\ReclaimFabric\Source\ReclaimFabric\bin\Release\ReclaimFabric.dll
-D:\Source\GitHub\ReclaimFabric\Source\ReclaimFabric\bin\Release\ReclaimFabric.pdb
-D:\Source\GitHub\ReclaimFabric\Source\ReclaimFabric\bin\Release\0Harmony.dll
-D:\Source\GitHub\ReclaimFabric\Source\ReclaimFabric\obj\Release\ReclaimFabric.dll
-D:\Source\GitHub\ReclaimFabric\Source\ReclaimFabric\obj\Release\ReclaimFabric.pdb
