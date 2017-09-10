@@ -11,19 +11,19 @@ using Harmony;
 
 namespace ReclaimFabric
 {
-    [HarmonyPatch(typeof(Thing), "SmeltProducts", new Type[] { typeof(Thing), typeof(float) })]
+    [HarmonyPatch(typeof(Thing), "SmeltProducts", new Type[] { typeof(float) })]
     public static class _Thing_ReclaimFabric
     {
-        static bool Prefix(Thing _instance, IEnumerable<Thing> _result, ref float efficiency)
+        static bool Prefix(Thing __instance, IEnumerable<Thing> __result, ref float efficiency)
         {
-            if (_instance.def.IsClothes() || _instance.def.IsAdvancedArmor() || _instance.def.IsArmor())
+            if (__instance.def.IsClothes() || __instance.def.IsAdvancedArmor() || __instance.def.IsArmor())
             {
-                _result = _SmeltProducts(_instance);
-                return false;
+                __result = _SmeltProducts(__instance).ToArray();
+                return true;
             }
             else
             {
-                return true;
+                return false;
             }
         }
 
