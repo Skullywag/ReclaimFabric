@@ -12,18 +12,15 @@ using Harmony;
 namespace ReclaimFabric
 {
     [HarmonyPatch(typeof(Thing), "SmeltProducts", new Type[] { typeof(float) })]
-    public static class _Thing_ReclaimFabric
+    public class _Thing_ReclaimFabric
     {
-        static bool Prefix(Thing __instance, IEnumerable<Thing> __result, ref float efficiency)
+        static void Postfix(Thing __instance, IEnumerable<Thing> __result)
         {
             if (__instance.def.IsClothes() || __instance.def.IsAdvancedArmor() || __instance.def.IsArmor())
             {
-                __result = _SmeltProducts(__instance).ToArray();
-                return true;
-            }
-            else
-            {
-                return false;
+                var result = _SmeltProducts(__instance).ToArray();
+                Log.Message($"Intercepting {__instance?.def?.defName} with {string.Join(", ", result.Select(x => $"{x?.TryGetQuality(out QualityCategory qc) } {x?.def?.defName}").ToArray())}");
+                __result = result;
             }
         }
 
