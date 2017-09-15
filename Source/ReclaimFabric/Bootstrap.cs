@@ -24,7 +24,7 @@ namespace ReclaimFabric
     {
         static void Prefix(this Thing __instance, ref IEnumerable<Thing> __result, float efficiency)
         {
-            __result = new List<Thing>();
+            __result = new List<Thing>(__result);
             if (__instance.def.IsClothes() ||
                 __instance.def.IsAdvancedArmor() ||
                 __instance.def.IsArmor())
