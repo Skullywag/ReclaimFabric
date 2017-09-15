@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Reflection;
 using Verse;
 using Harmony;
@@ -15,7 +13,7 @@ namespace ReclaimFabric
         // this static constructor runs to create a HarmonyInstance and install a patch.
         static Main()
         {
-            HarmonyInstance harmony = HarmonyInstance.Create("skullywag.RimWorld.ReclaimFabric");
+            HarmonyInstance harmony = HarmonyInstance.Create("com.github.Skullywag.ReclaimFabric");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
         }
     }
