@@ -1,29 +1,59 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Reflection;
 using Verse;
+using Harmony;
 using RimWorld;
+using UnityEngine;
 
 namespace ReclaimFabric
 {
-    class Bootstrap : Def
+    [StaticConstructorOnStartup]
+    class Main
     {
-        private const BindingFlags UniversalBindingFlags = BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic;
-
-        static Bootstrap()
+        // this static constructor runs to create a HarmonyInstance and install a patch.
+        static Main()
         {
-            {
-                MethodInfo method3 = typeof(Thing).GetMethod("SmeltProducts", BindingFlags.Instance | BindingFlags.Public);
-                MethodInfo method4 = typeof(_Thing_ReclaimFabric).GetMethod("_SmeltProducts", BindingFlags.Static | BindingFlags.NonPublic);
-                Log.Message("Attempting detour from " + method3 + "to " + method4);
-                if (!Detours.TryDetourFromTo(method3, method4))
-                {
-                    Log.Error("Reclaim Fabric Detour failed");
-                    return;
-                }
-                Log.Message("Reclaim Fabric Detour Successful");
-            }
+            HarmonyInstance harmony = HarmonyInstance.Create("skullywag.RimWorld.ReclaimFabric");
+            harmony.PatchAll(Assembly.GetExecutingAssembly());
+        }
+    }
 
-            Assembly Assembly_CSharp = Assembly.Load("Assembly-CSharp.dll");
+    [HarmonyPatch(typeof(Thing))]
+    [HarmonyPatch("SmeltProducts")]
+    static class ReclaimFabric_Thing
+    {
+        static void Prefix(this Thing __instance, ref IEnumerable<Thing> __result, float efficiency)
+        {
+            __result = new List<Thing>();
+            if (__instance.def.IsClothes() ||
+                __instance.def.IsAdvancedArmor() ||
+                __instance.def.IsArmor())
+            {
+                // Assume Direct Control
+                Pawn crafter = __instance.Position.GetEdifice(__instance.Map).InteractionCell.GetFirstPawn(__instance.Map);
+                float skillPerc = (float)crafter.skills.GetSkill(SkillDefOf.Crafting).Level / 20;
+                float num = Mathf.Lerp(0.5f, 1.5f, skillPerc);
+                float healthPerc = (float)__instance.HitPoints / __instance.MaxHitPoints;
+                float num1 = Mathf.Lerp(0f, 0.4f, healthPerc);
+                
+                List<ThingCountClass> costListAdj = __instance.CostListAdjusted();
+                foreach (ThingCountClass thingCost in costListAdj)
+                {
+                    if (!thingCost.thingDef.intricate)
+                    {
+                        float PercentMaxLimit = thingCost.count * num1;
+                        int mainSmeltProductCount = (int)(PercentMaxLimit * num);
+                        if (mainSmeltProductCount > 0)
+                        {
+                            Thing resultantSmeltedThing = ThingMaker.MakeThing(thingCost.thingDef);
+                            resultantSmeltedThing.stackCount = mainSmeltProductCount;
+                            __result.Add(resultantSmeltedThing);
+                        }
+                    }
+                }
+            }
         }
     }
 }
