@@ -1,3 +1,7 @@
 /Source/*/Source-DLLs/*
 *Thumbs.db
 /source/*/Bin/*
+Source/ReclaimFabric/obj
+Source/ReclaimFabric/bin
+Source/.vs/ReclaimFabric/v16
+Source/.vs
