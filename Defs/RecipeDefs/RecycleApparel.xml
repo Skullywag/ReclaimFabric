@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<RecipeDefs>
+<Defs>
 
 
   <RecipeDef>
@@ -32,13 +32,10 @@
       <categories>
         <li>Apparel</li>
       </categories>
-      <disallowedSpecialFilters>
-        <li>AllowNoIngredients</li>
-      </disallowedSpecialFilters>
     </fixedIngredientFilter>
 	  <workSkill>Crafting</workSkill>
     <efficiencyStat>TailoringSpeed</efficiencyStat>
   </RecipeDef>
 
 
-</RecipeDefs>
+</Defs>

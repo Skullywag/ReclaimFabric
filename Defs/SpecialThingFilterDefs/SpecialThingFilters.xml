@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<SpecialThingFilters>
+<Defs>
 
   <SpecialThingFilterDef>
     <defName>AllowNoIngredients</defName>
@@ -12,6 +12,6 @@
     <workerClass>ReclaimFabric.SpecialThingFilterWorker_NoIngredients</workerClass>
   </SpecialThingFilterDef>
   
-</SpecialThingFilters>
+</Defs>
 
 

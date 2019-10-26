@@ -55,8 +55,8 @@ namespace ReclaimFabric
             }
 
             // keep track of detours and spit out some messaging
-            string sourceString = source.DeclaringType.FullName + "." + source.Name + " @ 0x" + source.MethodHandle.GetFunctionPointer().ToString("X" + (IntPtr.Size * 2).ToString());
-            string destinationString = destination.DeclaringType.FullName + "." + destination.Name + " @ 0x" + destination.MethodHandle.GetFunctionPointer().ToString("X" + (IntPtr.Size * 2).ToString());
+            var sourceString = source.DeclaringType.FullName + "." + source.Name + " @ 0x" + source.MethodHandle.GetFunctionPointer().ToString("X" + (IntPtr.Size * 2).ToString());
+            var destinationString = destination.DeclaringType.FullName + "." + destination.Name + " @ 0x" + destination.MethodHandle.GetFunctionPointer().ToString("X" + (IntPtr.Size * 2).ToString());
 
             detoured.Add(sourceString);
             destinations.Add(destinationString);
@@ -67,14 +67,14 @@ namespace ReclaimFabric
                 // 12 byte destructive
 
                 // Get function pointers
-                long Source_Base = source.MethodHandle.GetFunctionPointer().ToInt64();
-                long Destination_Base = destination.MethodHandle.GetFunctionPointer().ToInt64();
+                var Source_Base = source.MethodHandle.GetFunctionPointer().ToInt64();
+                var Destination_Base = destination.MethodHandle.GetFunctionPointer().ToInt64();
 
                 // Native source address
-                byte* Pointer_Raw_Source = (byte*)Source_Base;
+                var Pointer_Raw_Source = (byte*)Source_Base;
 
                 // Pointer to insert jump address into native code
-                long* Pointer_Raw_Address = (long*)(Pointer_Raw_Source + 0x02);
+                var Pointer_Raw_Address = (long*)(Pointer_Raw_Source + 0x02);
 
                 // Insert 64-bit absolute jump into native code (address in rax)
                 // mov rax, immediate64
@@ -92,17 +92,17 @@ namespace ReclaimFabric
                 // 5 byte destructive
 
                 // Get function pointers
-                int Source_Base = source.MethodHandle.GetFunctionPointer().ToInt32();
-                int Destination_Base = destination.MethodHandle.GetFunctionPointer().ToInt32();
+                var Source_Base = source.MethodHandle.GetFunctionPointer().ToInt32();
+                var Destination_Base = destination.MethodHandle.GetFunctionPointer().ToInt32();
 
                 // Native source address
-                byte* Pointer_Raw_Source = (byte*)Source_Base;
+                var Pointer_Raw_Source = (byte*)Source_Base;
 
                 // Pointer to insert jump address into native code
-                int* Pointer_Raw_Address = (int*)(Pointer_Raw_Source + 1);
+                var Pointer_Raw_Address = (int*)(Pointer_Raw_Source + 1);
 
                 // Jump offset (less instruction size)
-                int offset = (Destination_Base - Source_Base) - 5;
+                var offset = Destination_Base - Source_Base - 5;
 
                 // Insert 32-bit relative jump into native code
                 *Pointer_Raw_Source = 0xE9;
