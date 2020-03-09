@@ -8,7 +8,7 @@
     <description>Reclaims fabrics and leathers from clothing, the amount returned is based on the items condition and tailor skill.</description>
     <jobString>Reclaiming fabrics.</jobString>
     <workAmount>1200</workAmount>
-    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
     <effectWorking>Tailor</effectWorking>
     <soundWorking>Recipe_Tailor</soundWorking>
     <recipeUsers>
@@ -34,7 +34,7 @@
       </categories>
     </fixedIngredientFilter>
 	  <workSkill>Crafting</workSkill>
-    <efficiencyStat>GeneralLaborSpeed</efficiencyStat>
+    <efficiencyStat>TailoringSpeed</efficiencyStat>
   </RecipeDef>
 
 
