@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <SpecialThingFilterDef>
+    <defName>AllowNoIngredients</defName>
+    <label>allow things with ingredients</label>
+    <description>Allow things with ingredients in their recipes.</description>
+    <parentCategory>Root</parentCategory>
+    <allowedByDefault>true</allowedByDefault>
+    <saveKey>AllowNoIngredients</saveKey>
+    <configurable>false</configurable>
+    <workerClass>ReclaimFabric.SpecialThingFilterWorker_NoIngredients</workerClass>
+  </SpecialThingFilterDef>
+  
+</Defs>
+
+
